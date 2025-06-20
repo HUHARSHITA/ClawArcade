@@ -36,7 +36,6 @@ const winSound = new Audio('victory.mp3');
 const bgMusic = new Audio('arcade.mp3');
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
-bgMusic.play();
 
 // Random balloon spawner
 function spawnBalloons() {
