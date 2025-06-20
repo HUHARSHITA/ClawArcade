@@ -125,6 +125,15 @@ function resetGame() {
   gameOver = false;
   gameWon = false;
   spawnBalloons();
+winSound.pause();
+  winSound.currentTime = 0;
+  sadSound.pause();
+  sadSound.currentTime = 0;
+
+  bgMusic.pause();
+  bgMusic.currentTime = 0;
+  bgMusic.play();
+}
 }
 
 
@@ -156,7 +165,7 @@ function update() {
 
   // Drop logic
   if (arrowDropping) {
-    arrowY += 5;
+    arrowY += 8;
     let hit = false;
 
     balloons = balloons.filter(b => {
