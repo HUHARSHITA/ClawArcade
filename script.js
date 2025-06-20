@@ -30,10 +30,10 @@ const balloonColors = ['hotpink', 'skyblue', 'lightyellow', 'lightgreen', 'viole
 spawnBalloons(); // 👈 Add this line right after defining the canvas and ctx
 
 // Load game sounds
-const popSound = new Audio('pop.mp3');
-const sadSound = new Audio('sad.mp3');
-const winSound = new Audio('victory.mp3');
-const bgMusic = new Audio('arcade.mp3');
+const popSound = new Audio('assets/pop.mp3');
+const sadSound = new Audio('assets/sad.mp3');
+const winSound = new Audio('assets/victory.mp3');
+const bgMusic = new Audio('assets/arcade.mp3');
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
 bgMusic.play();
@@ -125,7 +125,9 @@ function resetGame() {
   gameOver = false;
   gameWon = false;
   spawnBalloons();
-winSound.pause();
+
+  // Fix music issue
+  winSound.pause();
   winSound.currentTime = 0;
   sadSound.pause();
   sadSound.currentTime = 0;
@@ -133,7 +135,6 @@ winSound.pause();
   bgMusic.pause();
   bgMusic.currentTime = 0;
   bgMusic.play();
-}
 }
 
 
@@ -165,7 +166,7 @@ function update() {
 
   // Drop logic
   if (arrowDropping) {
-    arrowY += 8;
+    arrowY += 10;
     let hit = false;
 
     balloons = balloons.filter(b => {
