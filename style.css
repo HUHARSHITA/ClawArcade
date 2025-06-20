@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+canvas {
+  image-rendering: pixelated;
+  width: 95vw;
+  height: auto;
+  max-height: 70vh;
+  border: 2px solid white;
+  margin-top: 10px;
+  box-shadow: 0 0 10px white;
+}
+
+.touch-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.touch-buttons button {
+  background-color: pink;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(255, 192, 203, 0.5);
+}
+canvas {
+  width: 100vw;
+  height: auto;
+  max-height: 75vh;
+}
+#rotateNotice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  font-size: 24px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+  padding: 20px;
+}
+body, canvas {
+  font-family: 'Press Start 2P', monospace;
+}
