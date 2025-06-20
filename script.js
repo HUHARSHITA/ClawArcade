@@ -30,10 +30,10 @@ const balloonColors = ['hotpink', 'skyblue', 'lightyellow', 'lightgreen', 'viole
 spawnBalloons(); // 👈 Add this line right after defining the canvas and ctx
 
 // Load game sounds
-const popSound = new Audio('assets/pop.mp3');
-const sadSound = new Audio('assets/sad.mp3');
-const winSound = new Audio('assets/victory.mp3');
-const bgMusic = new Audio('assets/arcade.mp3');
+const popSound = new Audio('pop.mp3');
+const sadSound = new Audio('sad.mp3');
+const winSound = new Audio('victory.mp3');
+const bgMusic = new Audio('arcade.mp3');
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
 bgMusic.play();
